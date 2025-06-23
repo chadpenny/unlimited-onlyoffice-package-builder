@@ -3,7 +3,7 @@ name: release-onlyoffice
 on:
   push:
     tags:
-      - builds-debian-11/*
+      - 'builds-debian-11/**'
 
 env:
   DEBIAN_PACKAGE_SUFFIX: -camo
