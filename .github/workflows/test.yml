@@ -1,0 +1,11 @@
+name: test-workflow
+on:
+  push:
+    tags:
+      - 'test-*'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Workflow triggered!"
