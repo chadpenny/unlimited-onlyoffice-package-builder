@@ -1,0 +1,21 @@
+name: release-onlyoffice-test
+
+on:
+  push:
+    tags:
+      - 'builds-debian-11-*'
+
+env:
+  DEBIAN_PACKAGE_SUFFIX: -camo
+  TAG_SUFFIX: -camo
+  DISTRO_FULLNAME: Debian 11
+  DISTRO_TAG_PREFIX: debian-11
+
+jobs:
+  test-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test trigger
+        run: |
+          echo "Workflow triggered successfully!"
+          echo "Tag: ${{ github.ref_name }}"
