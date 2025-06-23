@@ -58,6 +58,7 @@ jobs:
         run: |
           docker image ls -a
           df -h
+      - name: Check out the repo
         uses: actions/checkout@v4
       - name: Split branch name
         env:
